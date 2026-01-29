@@ -1,4 +1,4 @@
-# ECSDI 2023/2024
+# ECSDI 2025/2026
 
 Ejemplos y codigo para la practica de ECSDI cuatrimestre de primavera 2025/2026
 
