@@ -16,17 +16,17 @@ WordCounter
 :Created on: 06/02/2018 15:58
 
 """
-
-from Util import gethostname
-import socket
 import argparse
-from FlaskServer import shutdown_server
+import logging
+import socket
+from collections import Counter
+from multiprocessing import Process
+
 import requests
 from flask import Flask, request
+from FlaskServer import shutdown_server
 from requests import ConnectionError
-from multiprocessing import Process
-from collections import Counter
-import logging
+from Util import gethostname
 
 __author__ = "bejar"
 
@@ -138,8 +138,8 @@ if __name__ == "__main__":
     print("DS Hostname =", hostaddr)
 
     # El solver aritmetico busca en el servicio de directorio 2 solvers con los que asociarse
-    clientadd = f"http://{hostaddr}:{port}"
-    clientid = hostaddr.split(".")[0] + "-" + str(port)
+    solveradd = f"http://{hostaddr}:{port}"
+    solverid = hostaddr.split(".")[0] + "-" + str(port)
     mess = "SEARCH|SOLVER,2"
 
     done = False

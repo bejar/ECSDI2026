@@ -18,17 +18,17 @@ DirectoryService
 
 """
 
-from Util import gethostname
-import socket
 import argparse
-from FlaskServer import shutdown_server
-
-from flask import Flask, request, render_template
-import numpy as np
+import logging
+import socket
 import time
 from random import randint
 from uuid import uuid4
-import logging
+
+import numpy as np
+from flask import Flask, render_template, request
+from FlaskServer import shutdown_server
+from Util import gethostname
 
 __author__ = "bejar"
 

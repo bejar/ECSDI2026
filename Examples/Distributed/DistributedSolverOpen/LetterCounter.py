@@ -16,17 +16,17 @@ WordCounter
 :Created on: 06/02/2018 15:58
 
 """
-
-from Util import gethostname
-import socket
 import argparse
-from FlaskServer import shutdown_server
+import logging
+import socket
+from collections import Counter
+from multiprocessing import Process
+
 import requests
 from flask import Flask, request
+from FlaskServer import shutdown_server
 from requests import ConnectionError
-from multiprocessing import Process
-from collections import Counter
-import logging
+from Util import gethostname
 
 __author__ = "bejar"
 

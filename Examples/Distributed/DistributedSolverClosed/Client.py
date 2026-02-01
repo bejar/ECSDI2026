@@ -16,14 +16,15 @@ Client
 :Created on: 06/02/2018 8:21
 
 """
-
-from Util import gethostname
-import socket
 import argparse
-from AgentUtil.FlaskServer import shutdown_server
-import requests
-from flask import Flask, request, render_template, url_for, redirect
 import logging
+import socket
+
+import requests
+from flask import Flask, redirect, render_template, request, url_for
+from Util import gethostname
+
+from AgentUtil.FlaskServer import shutdown_server
 
 __author__ = "bejar"
 

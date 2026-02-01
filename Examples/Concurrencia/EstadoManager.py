@@ -8,7 +8,6 @@ Created on 12/02/2014
 
 @author: javier
 """
-
 from multiprocessing import Process, Manager, Lock
 
 __author__ = "javier"

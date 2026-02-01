@@ -16,16 +16,16 @@ Arithmetic
 :Created on: 06/02/2018 8:21
 
 """
-
-from Util import gethostname
-import socket
 import argparse
-from FlaskServer import shutdown_server
+import logging
+import socket
+from multiprocessing import Process
+
 import requests
 from flask import Flask, request
+from FlaskServer import shutdown_server
 from requests import ConnectionError
-from multiprocessing import Process
-import logging
+from Util import gethostname
 
 __author__ = "bejar"
 

@@ -15,8 +15,8 @@ Util.py
 
 :Date:  23/02/2021
 """
-
 import socket
+
 from pif import get_public_ip
 
 __author__ = "bejar"
@@ -25,5 +25,6 @@ __author__ = "bejar"
 def gethostname():
     try:
         return socket.gethostbyaddr(get_public_ip())[0]
-    except:
+    except Exception as e:
+        print(f"Could not get public hostname: {e}")
         return socket.gethostname()

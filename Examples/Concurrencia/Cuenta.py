@@ -9,7 +9,6 @@ Created on 12/02/2014
 @author: javier
 
 """
-
 from multiprocessing import Process
 
 __author__ = 'javier'

@@ -18,14 +18,15 @@ Arithmetic
 """
 
 import argparse
-from FlaskServer import shutdown_server
-import requests
-from flask import Flask, request
-from requests import ConnectionError
-from multiprocessing import Process
-from Util import gethostname
 import logging
 import socket
+from multiprocessing import Process
+
+import requests
+from flask import Flask, request
+from FlaskServer import shutdown_server
+from requests import ConnectionError
+from Util import gethostname
 
 __author__ = "bejar"
 

@@ -16,24 +16,24 @@ Logger
 :Created on: 06/02/2018 8:21
 
 """
-
-from io import BytesIO
-from Util import gethostname
-import socket
 import argparse
-from FlaskServer import shutdown_server
-import requests
-from requests import ConnectionError
-from flask import Flask, request, render_template
+import socket
+from io import BytesIO
+
 import matplotlib
+import requests
+from flask import Flask, render_template, request
+from FlaskServer import shutdown_server
+from requests import ConnectionError
+from Util import gethostname
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 import base64
-import numpy as np
-import time
 import logging
-from uuid import uuid4
+import time
+
+import matplotlib.pyplot as plt
+import numpy as np
 
 __author__ = "bejar"
 
@@ -180,7 +180,7 @@ if __name__ == "__main__":
             pass
 
     if "OK" in resp:
-        print(f"LOGGER successfully registered")
+        print("LOGGER successfully registered")
         # Ponemos en marcha el servidor Flask
         app.run(host=hostname, port=port, debug=False, use_reloader=False)
 

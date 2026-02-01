@@ -17,17 +17,17 @@ Solver
 
 """
 
-from Util import gethostname
-import socket
 import argparse
-from FlaskServer import shutdown_server
-import requests
-from flask import Flask, request, render_template
-from requests import ConnectionError
+import logging
+import socket
 from random import randint
 from uuid import uuid4
-import logging
 
+import requests
+from flask import Flask, render_template, request
+from FlaskServer import shutdown_server
+from requests import ConnectionError
+from Util import gethostname
 
 __author__ = "bejar"
 

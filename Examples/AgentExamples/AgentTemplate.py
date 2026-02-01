@@ -14,14 +14,14 @@ Asume que el agente de registro esta en el puerto 9000
 @author: javier
 """
 
-from multiprocessing import Process, Queue
 import socket
+from multiprocessing import Process, Queue
 
-from rdflib import Namespace, Graph
 from flask import Flask
+from rdflib import Graph, Namespace
 
-from AgentUtil.FlaskServer import shutdown_server
 from AgentUtil.Agent import Agent
+from AgentUtil.FlaskServer import shutdown_server
 
 __author__ = "javier"
 

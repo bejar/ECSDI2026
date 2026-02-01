@@ -17,13 +17,14 @@ Client
 
 """
 
-from Util import gethostname
 import argparse
-from FlaskServer import shutdown_server
-import requests
-from flask import Flask, request, render_template, url_for, redirect
 import logging
 import socket
+
+import requests
+from flask import Flask, redirect, render_template, request, url_for
+from FlaskServer import shutdown_server
+from Util import gethostname
 
 __author__ = "bejar"
 
@@ -116,7 +117,7 @@ def send_message(probtype, problem):
 
     # Busca un sotver en el servicio de directorio
     solveradd = requests.get(
-        diraddress + "/message", params={"message": f"SEARCH|SOLVER"}
+        diraddress + "/message", params={"message": "SEARCH|SOLVER"}
     ).text
     # Solver encontrado
     if "OK" in solveradd:

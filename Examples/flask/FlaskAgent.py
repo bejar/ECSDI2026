@@ -34,12 +34,12 @@ FlaskAgent
 :Created on: 18/02/2015 8:28
 
 """
-
-from flask import Flask, request
 import argparse
-import requests
-from requests import ConnectionError
 from multiprocessing import Process
+
+import requests
+from flask import Flask, request
+from requests import ConnectionError
 
 __author__ = "bejar"
 

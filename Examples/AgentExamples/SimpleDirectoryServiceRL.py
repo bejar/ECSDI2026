@@ -18,22 +18,22 @@ Es identico que SimpleDirectoryAgent pero reescrito como reglas
 @author: javier ###**
 """
 
-from multiprocessing import Process, Queue
 import argparse
 import logging
+import socket
+from multiprocessing import Process, Queue
 
-from flask import Flask, request, render_template
-from rdflib import Graph, RDF, Namespace, RDFS
+from flask import Flask, render_template, request
+from rdflib import RDF, RDFS, Graph, Namespace
 from rdflib.namespace import FOAF
 
 from AgentUtil.ACL import ACL
-from AgentUtil.FlaskServer import shutdown_server
-from AgentUtil.Agent import Agent
 from AgentUtil.ACLMessages import build_message, get_message_properties
-from AgentUtil.Logging import config_logger
+from AgentUtil.Agent import Agent
 from AgentUtil.DSO import DSO
+from AgentUtil.FlaskServer import shutdown_server
+from AgentUtil.Logging import config_logger
 from AgentUtil.Util import gethostname
-import socket
 
 __author__ = "javier"
 

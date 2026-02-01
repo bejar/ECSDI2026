@@ -8,7 +8,6 @@ Created on 12/02/2014
 
 @author: javier
 """
-
 from multiprocessing import Process, Array
 from ctypes import c_int
 

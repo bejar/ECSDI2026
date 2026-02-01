@@ -10,10 +10,10 @@ Webservice flask con tres entradas
 
 @author: javier
 """
-
 from multiprocessing import Process
-from flask import Flask, request, render_template
 from time import sleep
+
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 

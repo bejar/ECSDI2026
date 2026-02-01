@@ -18,12 +18,12 @@ StressTest
 :Created on: 07/02/2018 13:26
 
 """
-
 import argparse
-import requests
 import random
-import string
 import socket
+import string
+
+import requests
 
 __author__ = "bejar"
 

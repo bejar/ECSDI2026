@@ -9,9 +9,8 @@ Example1
 Ejemplos de RDFLIB
 
 """
-
-from rdflib.namespace import Namespace, FOAF
 from rdflib import Graph, Literal
+from rdflib.namespace import FOAF, Namespace
 
 __author__ = "bejar"
 

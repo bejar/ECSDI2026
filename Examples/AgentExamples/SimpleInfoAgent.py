@@ -9,23 +9,22 @@ Agente que se registra como agente de hoteles y espera peticiones
 @author: javier ###**
 """
 
-from multiprocessing import Process, Queue
-import logging
 import argparse
+import logging
+import socket
+from multiprocessing import Process, Queue
 
 from flask import Flask, request
-from rdflib import Graph, Namespace, Literal
+from rdflib import Graph, Literal, Namespace
 from rdflib.namespace import FOAF, RDF
 
 from AgentUtil.ACL import ACL
-from AgentUtil.FlaskServer import shutdown_server
-from AgentUtil.ACLMessages import build_message, send_message, get_message_properties
+from AgentUtil.ACLMessages import build_message, get_message_properties, send_message
 from AgentUtil.Agent import Agent
-from AgentUtil.Logging import config_logger
 from AgentUtil.DSO import DSO
+from AgentUtil.FlaskServer import shutdown_server
+from AgentUtil.Logging import config_logger
 from AgentUtil.Util import gethostname
-import socket
-
 
 __author__ = "javier"
 

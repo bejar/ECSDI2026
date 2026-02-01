@@ -27,9 +27,10 @@ RandomInfo
 
 """
 
-from rdflib import Graph, RDF, RDFS, OWL, XSD, Namespace, Literal
-import string
 import random
+import string
+
+from rdflib import OWL, RDF, RDFS, XSD, Graph, Literal, Namespace
 
 __author__ = "bejar"
 

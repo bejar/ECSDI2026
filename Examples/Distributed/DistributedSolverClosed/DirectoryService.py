@@ -17,17 +17,16 @@ DirectoryService
 :Created on: 06/02/2018 8:20
 
 """
-
-from Util import gethostname
-import socket
 import argparse
-from FlaskServer import shutdown_server
-
-from flask import Flask, request, render_template
+import logging
+import socket
 import time
 from random import sample
 from uuid import uuid4
-import logging
+
+from flask import Flask, render_template, request
+from FlaskServer import shutdown_server
+from Util import gethostname
 
 __author__ = "bejar"
 

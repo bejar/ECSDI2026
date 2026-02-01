@@ -8,9 +8,8 @@ Created on 12/02/2015
 
 @author: javier
 """
-
-from multiprocessing import Process, Array, Lock
 from ctypes import c_int
+from multiprocessing import Array, Lock, Process
 
 __author__ = "javier"
 

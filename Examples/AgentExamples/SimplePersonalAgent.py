@@ -12,22 +12,22 @@ Created on 09/02/2014 ###**
 @author: javier
 """
 
-from multiprocessing import Process
-import logging
 import argparse
+import logging
+import socket
+from multiprocessing import Process
 
 from flask import Flask, render_template, request
 from rdflib import Graph, Namespace
 from rdflib.namespace import FOAF, RDF
 
 from AgentUtil.ACL import ACL
-from AgentUtil.DSO import DSO
-from AgentUtil.FlaskServer import shutdown_server
 from AgentUtil.ACLMessages import build_message, send_message
 from AgentUtil.Agent import Agent
+from AgentUtil.DSO import DSO
+from AgentUtil.FlaskServer import shutdown_server
 from AgentUtil.Logging import config_logger
 from AgentUtil.Util import gethostname
-import socket
 
 __author__ = "javier"
 

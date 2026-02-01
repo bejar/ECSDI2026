@@ -25,5 +25,6 @@ __author__ = "bejar"
 def gethostname():
     try:
         return socket.gethostbyaddr(get_public_ip())[0]
-    except:
+    except Exception as e:
+        print(f"Could not get public hostname: {e}")
         return socket.gethostname()

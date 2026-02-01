@@ -9,8 +9,8 @@ Created on 12/02/2014
 
 __author__ = 'javier'
 
-from multiprocessing import Process, Queue
 import time
+from multiprocessing import Process, Queue
 
 
 def cuenta(q):
